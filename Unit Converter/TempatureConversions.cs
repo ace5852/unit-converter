@@ -83,7 +83,7 @@ namespace Unit_Converter
             {
                 //We are converting from Degrees F
                 TEMP = Convert.ToDouble(txtdegF.Text);
-                NEWTEMP = (TEMP - 32)*(5/9);
+                NEWTEMP = (TEMP - 32) * (5.0/9.0);
                 txtdegC.Text = Convert.ToString(Math.Round(NEWTEMP, 2));
                 txtK.Text = Convert.ToString(Convert.ToDouble(txtdegC.Text) + 273.15);
                 return;
@@ -94,7 +94,7 @@ namespace Unit_Converter
             {
                 //We are converting from Degrees C
                 TEMP = Convert.ToDouble(txtdegC.Text);
-                NEWTEMP = (TEMP * (5 / 9)) + 32;
+                NEWTEMP = (TEMP * 1.8) + 32;
                 txtdegF.Text = Convert.ToString(Math.Round(NEWTEMP, 2));
                 txtK.Text = Convert.ToString(Convert.ToDouble(txtdegC.Text) + 273.15);
                 return;
@@ -105,7 +105,7 @@ namespace Unit_Converter
                 //We are converting from Kelvin
                 txtdegC.Text = Convert.ToString(Convert.ToDouble(txtK.Text) - 273.15);
                 TEMP = Convert.ToDouble(txtdegC.Text);
-                NEWTEMP = (TEMP * (5 / 9)) + 32;
+                NEWTEMP = (TEMP * 1.8) + 32;
                 txtdegF.Text = Convert.ToString(Math.Round(NEWTEMP, 2));
                 return;
             }
